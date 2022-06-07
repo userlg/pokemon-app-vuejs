@@ -1,25 +1,42 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 
 import home from '../components/home.vue';
 
 import list from '../components/list.vue';
 
-const routes = createRouter([
+import picker from '../components/picker.vue'
+
+import about from '../components/about.vue'
+
+const routes = [
     {
         path: '/',
-        component: home
+        component: home,
+        name:'home'
     },
     {
         path: '/list',
-        component: list
+        component: list,
+        name: 'list'
+    },
+    {
+        path: '/picker/:slug',
+        component: picker,
+        name: 'picker'
+    },
+    {
+        path: '/about',
+        component: about,
+        name: 'about'
     }
 
-]);
+];
 
-const router = {
-    history: createWebHistory,
+const router = createRouter({
+    history: createWebHashHistory(),
     routes
-}
+});
 
 export default router;
+   
