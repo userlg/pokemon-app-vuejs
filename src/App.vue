@@ -5,8 +5,9 @@
 </script>
 
 <template>
- <div class="bg-primary">
-   <h3 class="my-auto text-warning">Vuejs Pokemo App</h3>
+ <div class="bg-white border border-2 border-dark rounded d-flex justify-content-center align-items-center col-6 mx-auto p-4 flex-column gap-3">
+   <h3 class="my-auto  text-success">Vuejs Pokemo App</h3>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est expedita atque ea veritatis consequatur nobis, deserunt quis, maiores temporibus iusto aperiam dolores beatae? Necessitatibus inventore aperiam officia vitae enim quaerat?</p>
  </div>
  
 </template>
