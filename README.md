@@ -11,4 +11,4 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 ### Yellow  #FECA1B
 
-### Blue    ##3761A8
+### Blue    #3761A8

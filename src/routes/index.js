@@ -5,9 +5,11 @@ import home from '../components/home.vue';
 
 import list from '../components/list.vue';
 
-import picker from '../components/picker.vue'
+import picker from '../components/picker.vue';
 
-import about from '../components/about.vue'
+import about from '../components/about.vue';
+
+import search from '../components/search.vue'
 
 const routes = [
     {
@@ -29,6 +31,11 @@ const routes = [
         path: '/about',
         component: about,
         name: 'about'
+    },
+    {
+        path: '/search',
+        component: search,
+        name: 'search'
     }
 
 ];

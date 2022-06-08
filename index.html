@@ -4,12 +4,30 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="public/pokeball.ico" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <title>Pokemon App</title>
   </head>
-  <body>
-    <div id="app">
+  <body style="margin: 0; padding: 0; box-sizing: content-box;" class="background"  >
+    <div class="container" style="width: 80%; background: rgb(182, 144, 166); margin: auto; padding: 2%; border: 2px solid black; opacity: 0.9; ">
+    <div id="app" style="opacity: 1;">
      
     </div>
+  </div>
+
+  <style>
+    .background {
+      background-color: #ED1C24;
+      background-image: url('src/assets/background.jpg');
+      position: static;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  </style>
    
     <script type="module" src="/src/main.js"></script>
   </body>

@@ -1,8 +1,9 @@
 <template>
   <div>
-    <h3>List main view</h3>
+    <h3 class="title">List of Kanto League</h3>
     <div v-for="(pokemon, index) in pokemons" :key="index">
-      {{ pokemon.name }}
+      <p>{{ pokemon.name }} </p>
+      <a href="pokemon.url">{{ pokemon.url }}</a> 
     </div>
   </div>
 </template>
@@ -12,7 +13,7 @@ import axios from "axios";
 export default {
 data() {
     return {
-        pokemons: []
+        pokemons: {}
     }
 },
 created(){
