@@ -5,7 +5,7 @@
       <p>{{ pokemon.name }}</p>
       <p>{{ index + 1}}</p>
        <div> {{ getPng(index + 1) }} </div>
-      <img src="link" alt="">
+      <img :src="getPng(index + 1)" alt="">
     </div>
   </div>
 </template>
@@ -16,7 +16,6 @@ export default {
 data: () => {
     return {
         pokemons: {},
-        link: '',
     }
 },
 created(){
@@ -32,9 +31,7 @@ methods: {
     },
      getPng(index){
       var link = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"+ index + ".png";
-      console.log(index);
-      this.link = link;
-      //return link;
+      return link;
     },
   },
 }
