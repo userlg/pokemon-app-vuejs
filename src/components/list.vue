@@ -2,16 +2,14 @@
   <div>
     <h3 class="title">List of Kanto League</h3>
     <div class="grid">
-      <paginate  ref="paginator" name="pokemons" :list="pokemons" :per="2">
-    <div  v-for="(pokemon, index) in paginated('pokemons')" :key="index">
-  
+      <div v-for="(pokemon, index) in pokemons" :key="index">
         <div class="card">
           <p class="name">{{ pokemon.name }}</p>
           <img :src="getPng(index + 1)" alt="" />
-       </div>
+        </div>
       </div>
-      </paginate>
     </div>
+
   </div>
 </template>
 <script lang="js">
@@ -20,7 +18,7 @@ import axios from "axios";
 export default {
 data: () => {
     return {
-        paginate:['pokemons'],
+        page: 10,
         pokemons: [],
     }
 },
@@ -39,11 +37,14 @@ methods: {
       var link = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"+ index + ".png";
       return link;
     },
+     clickCallback: function(pageNum) {
+      console.log(pageNum)
+    }
   },
 }
 </script>
 
-<style>
+<style lang="css">
 .card {
   border: 2px double red;
   width: 110%;
@@ -53,11 +54,13 @@ methods: {
   align-items: center;
   flex-direction: column;
   border-radius: 7px;
+  background-color: black;
+  color: white;
 }
 
 .name {
   font-family: "Times New Roman", Times, serif;
-
+  font-size: 1vw;
 }
 
 .grid {
