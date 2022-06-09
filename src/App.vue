@@ -1,9 +1,16 @@
-<script setup>
-</script>
-
 <template>
-  <div id="app">
-    <div class="container">
+  <div class="main">
+        <div id="app">
+  
+       <nav>
+      <div id="navbar">
+        <router-link to="/">Home</router-link>
+         <router-link to="/search">Search</router-link>
+        <router-link to="/list">Show All</router-link>
+        <!-- <router-link to="/picker/1">Pick</router-link>-->
+      <!-- <router-link to="/about">About</router-link>_-->
+      </div>
+    </nav>
     <h3 class="title animate__animated animate__lightSpeedInRight animate__delay-1s">Pokemon App</h3>
     <div class="article">
     <p class="text">
@@ -13,28 +20,23 @@
       vitae enim quaerat? lore
     </p>
     </div>
-    <nav>
-      <div id="navbar">
-        <router-link to="/">Home</router-link>
-         <router-link to="/search">Search</router-link>
-        <router-link to="/list">Show All</router-link>
-        <!-- <router-link to="/picker/1">Pick</router-link>-->
-      <!-- <router-link to="/about">About</router-link>_-->
-      </div>
-    </nav>
   </div>
   </div>
   <router-view></router-view>
 </template>
+<script setup>
 
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: black;
+  margin-top: 15px;
+  opacity: 1;
+}
+.main {
+  opacity: 1;
 }
 
 nav {
