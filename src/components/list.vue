@@ -3,10 +3,12 @@
     <h3 class="title">List of Kanto League</h3>
     <div class="grid">
       <div v-for="(pokemon, index) in pokemons" :key="index">
+      <router-link to="/about/:id">
         <div class="card">
-          <p class="name">{{ pokemon.name }}</p>
+          <p class="name style">{{ pokemon.name }}</p>
           <img :src="getPng(index + 1)" alt="" />
         </div>
+        </router-link>
       </div>
     </div>
 
@@ -72,6 +74,11 @@ methods: {
   gap: 5px;
   grid-template-rows: 4fr;
   padding: 2vh;
+}
+
+body {
+  overflow-x: hidden;
+  
 }
 </style>
 

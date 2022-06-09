@@ -23,12 +23,12 @@ const routes = [
         name: 'list'
     },
     {
-        path: '/picker/:slug',
+        path: '/picker/:id',
         component: picker,
         name: 'picker'
     },
     {
-        path: '/about',
+        path: '/about/:id',
         component: about,
         name: 'about'
     },

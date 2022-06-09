@@ -4,9 +4,9 @@
   
        <nav>
       <div id="navbar">
-        <router-link to="/">Home</router-link>
-         <router-link to="/search">Search</router-link>
-        <router-link to="/list">Show All</router-link>
+        <router-link to="/" class="style">Home</router-link>
+         <router-link to="/search" class="style">Search</router-link>
+        <router-link to="/list" class="style">Show All</router-link>
         <!-- <router-link to="/picker/1">Pick</router-link>-->
       <!-- <router-link to="/about">About</router-link>_-->
       </div>
@@ -59,7 +59,7 @@ nav {
 .title {
   margin-top: 10px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 3.2vw;
+  font-size: calc(3.2vw + 2vh);
   color: #FECA1B;
   -webkit-text-stroke: .2rem #3761A8;
 }
@@ -84,6 +84,10 @@ nav {
   margin: auto;
   background-color: aquamarine;
   border-radius: 50%;
+}
+
+.style{
+  text-decoration: none;
 }
 
 </style>
