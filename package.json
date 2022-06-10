@@ -10,7 +10,7 @@
   "dependencies": {
     "axios": "^0.27.2",
     "install": "^0.13.0",
-    "pinia": "^2.0.14",
+    "pinia": "^2.0.0-rc.10",
     "vue": "^3.2.37",
     "vue-axios": "^3.4.1",
     "vue-router": "^4.0.15"

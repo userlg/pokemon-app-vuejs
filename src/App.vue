@@ -18,16 +18,29 @@
           animate__animated animate__lightSpeedInRight animate__delay-1s
         "
       >
-        Pokemon App
+        Pokemon App 
       </h3>
     </div>
   </div>
   <router-view></router-view>
 </template>
-<script lang="js" setup >
-
-
+<script lang="js">
 import { useHandlerStore } from "./stores/useHandler";
+
+export default {
+  setup(){
+    const handler = useHandlerStore();
+
+    console.log(handler.link);
+
+    return {handler}
+  },
+  data: () => {
+    return {
+      
+    }
+  }
+}
 
 </script>
 <style>
