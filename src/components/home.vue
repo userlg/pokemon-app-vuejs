@@ -1,7 +1,7 @@
 <template>
   <div>
   <div class="home">
-    <h3>Home main View</h3>
+    <h3 class="title">Welcome to Main View</h3>
     <button @click="getRandom(0,152)" class="btn">Reset</button>
     <div>{{ random }}</div>
   </div>

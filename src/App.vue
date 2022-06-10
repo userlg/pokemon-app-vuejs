@@ -4,8 +4,12 @@
       <nav>
         <div id="navbar">
           <router-link :to="{ name: 'home' }" class="style">Home</router-link>
-          <router-link to="/search" class="style">Search</router-link>
-          <router-link to="/list" class="style">Show All</router-link>
+          <router-link :to="{ name: 'search' }" class="style"
+            >Search</router-link
+          >
+          <router-link :to="{ name: 'list' }" class="style"
+            >Show All</router-link
+          >
           <!-- <router-link to="/picker/1">Pick</router-link>-->
           <!-- <router-link to="/about">About</router-link>_-->
         </div>
@@ -18,14 +22,6 @@
       >
         Pokemon App
       </h3>
-      <div class="article">
-        <p class="text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est expedita
-          atque ea veritatis consequatur nobis, deserunt quis, maiores
-          temporibus iusto aperiam dolores beatae? Necessitatibus inventore
-          aperiam officia vitae enim quaerat? lore
-        </p>
-      </div>
     </div>
   </div>
   <router-view></router-view>
@@ -59,6 +55,9 @@ nav {
   justify-content: center;
   align-items: center;
   font-size: 3.4vh;
+  border: 2px double #3761A8;
+  border-radius: 6px;
+  width: 48%;
 }
 
 .title {
