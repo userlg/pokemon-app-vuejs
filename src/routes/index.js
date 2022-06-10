@@ -30,7 +30,8 @@ const routes = [
     {
         path: '/about/:id',
         component: about,
-        name: 'about'
+        name: 'about',
+        props: true
     },
     {
         path: '/search',

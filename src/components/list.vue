@@ -4,16 +4,16 @@
     <div class="grid">
   
       <div v-for="(pokemon, index) in pokemons" :key="index">
-      <router-link to="/about/:id">
+      <router-link :to="{ name:'about', params: { id: index + 1}}" key="index" class="style">
+      
         <div class="card">
-          <p class="name style">{{ pokemon.name }}</p>
+          <p class="name">{{ pokemon.name }}</p>
           <img :src="getPng(index + 1)" alt="" />
         </div>
         </router-link>
       </div>
            
     </div>
-     <pagination v-model="page" :records="30" :per-page="5" @paginate="clickCallback"></pagination>
  
 
   </div>
@@ -26,6 +26,7 @@ data: () => {
     return {
         page: 1,
         pokemons: [],
+        //id: this.$route.params.id,
     }
 },
 created(){
@@ -44,9 +45,6 @@ methods: {
       var link = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"+ index + ".png";
       return link;
     },
-     clickCallback: function(pageNum) {
-      console.log(pageNum)
-    }
   },
 }
 </script>
@@ -68,6 +66,7 @@ methods: {
 .name {
   font-family: "Times New Roman", Times, serif;
   font-size: 1vw;
+  text-decoration: none;
 }
 
 .grid {
@@ -83,7 +82,14 @@ methods: {
 
 body {
   overflow-x: hidden;
-  
 }
+
+
+.style{
+  text-decoration: none;
+}
+
+
+
 </style>
 
