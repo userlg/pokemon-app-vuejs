@@ -10,8 +10,6 @@
           <router-link :to="{ name: 'list' }" class="style"
             >Show All</router-link
           >
-          <!-- <router-link to="/picker/1">Pick</router-link>-->
-          <!-- <router-link to="/about">About</router-link>_-->
         </div>
       </nav>
       <h3
@@ -26,7 +24,11 @@
   </div>
   <router-view></router-view>
 </template>
-<script setup>
+<script lang="js" setup >
+
+
+import { useHandlerStore } from "./stores/useHandler";
+
 </script>
 <style>
 #app {
@@ -55,7 +57,7 @@ nav {
   justify-content: center;
   align-items: center;
   font-size: 3.4vh;
-  border: 2px double #3761A8;
+  border: 2px double #3761a8;
   border-radius: 6px;
   width: 48%;
 }
@@ -92,5 +94,6 @@ nav {
 
 .style {
   text-decoration: none;
+  font-size: 1.2vw;
 }
 </style>

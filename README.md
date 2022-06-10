@@ -1,14 +1,51 @@
-# Vue 3 + Vite
+# Pokemon App with Vuejs
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+### Welcome, this app is for demostration purposes about what vuejs can do. In this demo the data is provide it by pokeapi.
+The application has several components to management the search, the show all pokemon and details about an specific pokemon.
 
-## Recommended IDE Setup
+------------
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+# Requirements
 
++ nodejs 18
 
-#Pallet 
++ Vuejs 3
+
+-------------
+
+# Instructions
+
++ Clone the project repository from github
+```
+git clone https://github.com/userlg/pokemon-app-vuejs
+```
+
++ Inside in the project folder type the following command
+```
+npm install
+```
++ To run the project type
+```
+npm run dev
+```
++ To build this project use
+```
+npm run build
+```
++ If you wanna use docker, type the followings commands
+```
+docker build -t name-app .
+
+docker run -it -p 8080:8080 name-app
+
+```
+
+# Screenshots
+
+# Pallet 
 
 ### Yellow  #FECA1B
 
 ### Blue    #3761A8
+
+### <------------------Created by Userlg-------------------->
