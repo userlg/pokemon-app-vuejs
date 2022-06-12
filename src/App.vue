@@ -1,5 +1,4 @@
 <template>
-  <div class="main">
     <div id="app">
       <nav>
         <div id="navbar">
@@ -21,20 +20,12 @@
         Pokemon App 
       </h3>
     </div>
-  </div>
   <router-view></router-view>
 </template>
 <script lang="js">
-import { useHandlerStore } from "./stores/useHandler";
 
 export default {
-  setup(){
-    const handler = useHandlerStore();
 
-    console.log(handler.link);
-
-    return {handler}
-  },
   data: () => {
     return {
       
@@ -49,10 +40,8 @@ export default {
   text-align: center;
   color: black;
   margin-top: 15px;
-  opacity: 1;
-}
-.main {
-  opacity: 1;
+  width: 100%;
+  height: 100%;
 }
 
 nav {
@@ -69,7 +58,7 @@ nav {
   margin: auto;
   justify-content: center;
   align-items: center;
-  font-size: 3.4vh;
+  font-size: 3.6vh;
   border: 2px double #3761a8;
   border-radius: 6px;
   width: 48%;
@@ -78,7 +67,7 @@ nav {
 .title {
   margin-top: 10px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: calc(3.2vw + 2vh);
+  font-size: calc(3.2vw);
   color: #feca1b;
   -webkit-text-stroke: 0.2rem #3761a8;
 }
