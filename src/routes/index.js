@@ -9,7 +9,9 @@ import picker from '../components/picker.vue';
 
 import about from '../components/about.vue';
 
-import search from '../components/search.vue'
+import search from '../components/search.vue';
+
+import Error from '../components/errorComponent.vue';
 
 const routes = [
     {
@@ -38,10 +40,10 @@ const routes = [
         component: search,
         name: 'search'
     },
-     {
+    {
         path: '/:pathMatch(.*)*',
-        component: productNotFound,
-        name: 'not found'
+        component: Error,
+        name: 'Error'
     }
 
 ];

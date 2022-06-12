@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page">
     <h3 class="title">List of Kanto League</h3>
     <div class="grid">
   

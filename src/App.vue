@@ -1,26 +1,26 @@
 <template>
-    <div id="app">
-      <nav>
-        <div id="navbar">
-          <router-link :to="{ name: 'home' }" class="style">Home</router-link>
-          <router-link :to="{ name: 'search' }" class="style"
-            >Search</router-link
-          >
-          <router-link :to="{ name: 'list' }" class="style"
-            >Show All</router-link
-          >
-        </div>
-      </nav>
-      <h3
-        class="
-          title
-          animate__animated animate__lightSpeedInRight animate__delay-1s
-        "
-      >
-        Pokemon App 
-      </h3>
-    </div>
-  <router-view></router-view>
+  <div id="app">
+    <nav>
+      <div id="navbar">
+        <router-link :to="{ name: 'home' }" class="style">Home</router-link>
+        <router-link :to="{ name: 'search' }" class="style">Search</router-link>
+        <router-link :to="{ name: 'list' }" class="style">Show All</router-link>
+      </div>
+    </nav>
+    <h3
+      class="
+        title
+        animate__animated animate__lightSpeedInRight animate__delay-1s
+      "
+    >
+      Pokemon App
+    </h3>
+    <router-view v-slot="{ Component }">
+      <transition name="fade">
+        <component :is="Component" />
+      </transition>
+    </router-view>
+  </div>
 </template>
 <script lang="js">
 
@@ -64,6 +64,10 @@ nav {
   width: 48%;
 }
 
+.page {
+  position: relative;
+}
+
 .title {
   margin-top: 10px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -97,5 +101,15 @@ nav {
 .style {
   text-decoration: none;
   font-size: 1.2vw;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.9s ease-in-out;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

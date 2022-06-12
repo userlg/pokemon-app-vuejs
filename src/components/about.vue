@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="page">
     <h3 class="title">About Pokemon # {{ id }}</h3>
     <div class="poke-card">
       <div class="poke-text">

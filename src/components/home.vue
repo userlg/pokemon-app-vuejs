@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page">
   <div class="home">
     <h3 class="title">Welcome to Main View</h3>
     <button @click="getRandom(0,152)" class="btn">Reset</button>
